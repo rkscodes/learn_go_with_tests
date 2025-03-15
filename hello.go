@@ -15,8 +15,7 @@ func Hello(name, language string) string {
 	return greeting(language) + ", " + name + "!"
 }
 
-func greeting(language string) string {
-	var salutation string
+func greeting(language string) (salutation string) {
 
 	switch language {
 	case "English", "english", "":
@@ -29,7 +28,7 @@ func greeting(language string) string {
 		salutation = englishGreeting
 	}
 
-	return salutation
+	return
 }
 
 func main() {
